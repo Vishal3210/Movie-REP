@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Movie Filter</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <div class="main">
+        <h2>Suggest me a <span>Movie</span></h2>
+      <div id="sawo-container" style="height: 300px; width: 300px"></div>
+      <footer>
+        <h4>Made by ThakurBoyz  </h4>
+    </footer>
+    </div>
+    
+  </body>
+  <script src="http://websdk.sawolabs.com/sawo.min.js"></script>
+  <script>
+    var config = { containerID: "sawo-container",  identifierType: "email", apiKey: "ff0ba954-bca3-43b4-be52-c2eecc492e09", onSuccess: (payload) => { console.log(payload) }, }; var sawo = new Sawo(config); sawo.showForm();
+  </script>
+</html>
